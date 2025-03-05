@@ -10,16 +10,12 @@
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-    }:
+    { nixpkgs, ... }@inputs:
     {
       nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = inputs;
         modules = [
-          home-manager.nixosModules.home-manager
           ./configuration
         ];
       };

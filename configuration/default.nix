@@ -5,6 +5,6 @@
     ./nix-settings.nix
     ./system.nix
     ./services.nix
-    ./users.nix
+    ./users
   ];
 }
