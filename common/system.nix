@@ -3,8 +3,14 @@
   # Set networking.hostName in the host configuration
   networking.networkmanager.enable = true;
 
-  # needed for setting user's shell
-  programs.zsh.enable = true;
+  virtualisation.docker.enable = true;
+
+  programs = {
+    # needed for setting user's shell
+    zsh.enable = true;
+    # to run dynamically linked executables
+    nix-ld.enable = true;
+  };
 
   environment = {
     systemPackages = with pkgs; [

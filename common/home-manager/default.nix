@@ -13,6 +13,12 @@
         stateVersion = "24.11"; # Don't change this
         inherit username;
         homeDirectory = "/home/${username}";
+
+        packages = with pkgs; [
+          just
+          pre-commit
+          nixfmt-rfc-style
+        ];
       };
 
       targets.genericLinux.enable = true;
