@@ -6,6 +6,5 @@
     ./system.nix
     ./services.nix
     ./users.nix
-    ./home
   ];
 }
