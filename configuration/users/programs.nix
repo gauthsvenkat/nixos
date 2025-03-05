@@ -7,7 +7,6 @@
   ripgrep.enable = true;
   lazygit.enable = true;
   direnv.enable = true;
-  yazi.enable = true;
   nh.enable = true;
   firefox.enable = true;
 
@@ -54,7 +53,6 @@
       lt = "${pkgs.eza}/bin/eza --tree --icons --git --level=3";
       v = "${pkgs.neovim}/bin/nvim";
       b = "${pkgs.bat}/bin/bat";
-      y = "${pkgs.yazi}/bin/yazi";
       lg = "${pkgs.lazygit}/bin/lazygit";
     };
     initExtra = ''
