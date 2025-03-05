@@ -14,7 +14,10 @@
     {
       nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = inputs;
+        specialArgs = {
+          username = "ando";
+          inherit inputs;
+        };
         modules = [
           ./configuration
         ];
