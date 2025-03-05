@@ -2,7 +2,7 @@
 {
   users.users.ando = {
     isNormalUser = true;
-    hashedPassword = "$y$j9T$uSxCEmzPzFZlLnV2jcJJT0$b1EeEejq97Bvgqa9uyRoFkbxv8bpapKJWqy6sHpQM16";
+    initialHashedPassword = "$y$j9T$pW5XKfCQHdWvfaAnWJeNQ1$y05/b6FGJR3jSfXdpnDw.l9uj/gvT/ulszsLKme5d18";
     extraGroups = [
       "networkmanager"
       "wheel"
