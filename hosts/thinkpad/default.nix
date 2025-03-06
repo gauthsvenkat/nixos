@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, username, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -26,5 +26,10 @@
     kanata.keyboards.laptop.devices = [
       "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
     ];
+  };
+
+  home-manager.users.${username}.programs.git = {
+    userEmail = "gauthsvenkat@gmail.com";
+    userName = "Gautham Venkataraman";
   };
 }
