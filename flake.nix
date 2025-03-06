@@ -19,7 +19,7 @@
           inherit inputs;
         };
         modules = [
-          ./configuration
+          ./hosts/thinkpad
         ];
       };
     };

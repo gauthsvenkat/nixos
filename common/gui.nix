@@ -1,5 +1,4 @@
 {
-
   services = {
     # Uncomment following to enable Xorg (beside wayland)
     # xserver.enable = true;
@@ -18,6 +17,6 @@
 
   programs = {
     firefox.enable = true;
-    kdeconnect.enale = true;
+    kdeconnect.enable = true;
   };
 }
