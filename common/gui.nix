@@ -1,6 +1,4 @@
-{ username, inputs, ... }:
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   services = {
     # Uncomment following to enable Xorg (beside wayland)
@@ -18,8 +16,8 @@
   # Allows pipewire to acquire realtime priority
   security.rtkit.enable = true;
 
-  # Any self-respecting gui module needs a browser
-  home-manager.users.${username}.programs.firefox.enable = true;
-
-  programs.kdeconnect.enable = true;
+  programs = {
+    firefox.enable = true;
+    kdeconnect.enale = true;
+  };
 }
