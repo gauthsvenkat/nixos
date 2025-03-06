@@ -1,0 +1,27 @@
+{ username, ... }:
+{
+  imports = [
+    ./hardware-configuration.nix
+    ../../common/boot.nix
+    ../../common/nix-settings.nix
+    ../../common/system.nix
+    ../../common/users.nix
+    ../../common/gui.nix
+    ../../common/kanata.nix
+    ../../common/laptop.nix
+    ../../common/home-manager/development.nix
+  ];
+
+  networking.hostName = "xps";
+
+  services = {
+    kanata.keyboards.laptop.devices = [
+      # TODO: Change the following
+      ""
+    ];
+  };
+
+  home-manager.users.${username}.programs.git = {
+    userEmail = "gautham@dexterenergy.ai";
+  };
+}

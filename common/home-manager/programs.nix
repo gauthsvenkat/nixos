@@ -18,6 +18,7 @@
   git = {
     enable = true;
     lfs.enable = true;
+    userName = "Gautham Venkataraman";
   };
 
   btop = {

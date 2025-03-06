@@ -11,16 +11,21 @@
 
   outputs =
     { nixpkgs, ... }@inputs:
-    {
-      nixosConfigurations.thinkpad = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = {
-          username = "ando";
-          inherit inputs;
+    let
+      mkNixosSystem =
+        hostname: system: username:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = {
+            inherit username inputs;
+          };
+          modules = [ ./hosts/${hostname} ];
         };
-        modules = [
-          ./hosts/thinkpad
-        ];
+    in
+    {
+      nixosConfigurations = {
+        thinkpad = mkNixosSystem "thinkpad" "x86_64-linux" "ando";
+        xps = mkNixosSystem "xps" "x86_64-linux" "gautham";
       };
     };
 }
