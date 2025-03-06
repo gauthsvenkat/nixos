@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, hostname, ... }:
 {
-  # Set networking.hostName in the host configuration
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = hostname;
+    networkmanager.enable = true;
+  };
 
   virtualisation.docker.enable = true;
 

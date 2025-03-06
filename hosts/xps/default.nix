@@ -12,8 +12,6 @@
     ../../common/home-manager/development.nix
   ];
 
-  networking.hostName = "xps";
-
   services = {
     kanata.keyboards.laptop.devices = [
       # TODO: Change the following

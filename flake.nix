@@ -17,7 +17,7 @@
         nixpkgs.lib.nixosSystem {
           inherit system;
           specialArgs = {
-            inherit username inputs;
+            inherit username hostname inputs;
           };
           modules = [ ./hosts/${hostname} ];
         };
@@ -25,6 +25,7 @@
     {
       nixosConfigurations = {
         thinkpad = mkNixosSystem "thinkpad" "x86_64-linux" "ando";
+        elitedesk = mkNixosSystem "elitedesk" "x86_64-linux" "ando";
         xps = mkNixosSystem "xps" "x86_64-linux" "gautham";
       };
     };

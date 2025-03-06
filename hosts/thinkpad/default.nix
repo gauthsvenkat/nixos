@@ -13,8 +13,6 @@
     ../../common/home-manager/development.nix
   ];
 
-  networking.hostName = "thinkpad";
-
   services = {
     mullvad-vpn = {
       enable = true;
