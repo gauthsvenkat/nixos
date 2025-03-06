@@ -20,6 +20,7 @@
         python3
         nodejs
         rustup
+        wl-clipboard-rs
         # other useful tools
         cargo-generate
         # wezterm mentioned as a package and not enabled in programs
