@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -24,9 +28,9 @@
     in
     {
       nixosConfigurations = {
-        thinkpad = mkNixosSystem "thinkpad" "x86_64-linux" "ando";
+        # thinkpad = mkNixosSystem "thinkpad" "x86_64-linux" "ando";
+        # xps = mkNixosSystem "xps" "x86_64-linux" "gautham";
         elitedesk = mkNixosSystem "elitedesk" "x86_64-linux" "ando";
-        xps = mkNixosSystem "xps" "x86_64-linux" "gautham";
       };
     };
 }
