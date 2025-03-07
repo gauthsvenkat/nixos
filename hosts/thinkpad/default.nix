@@ -1,5 +1,8 @@
-{ pkgs, username, ... }:
 {
+  pkgs,
+  username,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../../common/boot.nix
@@ -21,10 +24,6 @@
       # while pkgs.mullvad-vpn comes with the gui as well
       package = pkgs.mullvad-vpn;
     };
-
-    kanata.keyboards.laptop.devices = [
-      "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
-    ];
   };
 
   home-manager.users.${username}.programs.git = {
