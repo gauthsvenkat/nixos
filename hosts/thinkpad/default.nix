@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    # TODO: Disko?
     ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix

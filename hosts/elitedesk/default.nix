@@ -2,6 +2,7 @@
 {
   imports = [
     ./disko-config.nix
+    # TODO: run this
     # ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix
@@ -19,7 +20,6 @@
       keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM7C+VPx3ZLurAON5pknD1AlkvdsmB+0J63Yo8y7MVMJ ando@thinkpad"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBjZq6GCEU+TpzLRthwvjzN6pPO+gJt2ngakYpxycf+y ando@thunderdome"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDL5xWBHUGTxELm2QMa4EftqRPXBroDkZZxmCqWeyXm3 gauthsvenkat@Gauthams-Air.localdomain"
       ];
     in
     {
