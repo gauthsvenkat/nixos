@@ -1,5 +1,4 @@
-{ username, ... }:
-{
+{username, ...}: {
   imports = [
     ./disko-config.nix
     # ./hardware-configuration.nix
@@ -13,13 +12,6 @@
     ../../common/ssh.nix
     ../../common/home-manager/development.nix
   ];
-
-  services = {
-    kanata.keyboards.laptop.devices = [
-      # TODO: Change the following
-      ""
-    ];
-  };
 
   home-manager.users.${username}.programs.git = {
     userEmail = "gautham@dexterenergy.ai";
