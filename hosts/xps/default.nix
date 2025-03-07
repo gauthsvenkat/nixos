@@ -1,7 +1,7 @@
 { username, ... }:
 {
   imports = [
-    ./hardware-configuration.nix
+    # ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix
     ../../common/system.nix
