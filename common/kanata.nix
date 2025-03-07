@@ -4,7 +4,9 @@
     keyboards.laptop = {
       # NOTE: Highly recommended to set the devices in the host.
       # Otherwise, all keyboards will be intercepted.
-      # devices = [ ];
+      devices = [
+        "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
+      ];
       config = ''
         (defsrc
           caps a s d f j k l ;

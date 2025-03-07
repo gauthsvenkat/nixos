@@ -1,6 +1,7 @@
 { username, ... }:
 {
   imports = [
+    ./disko-config.nix
     # ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix
