@@ -2,8 +2,7 @@
 {
   imports = [
     ./disko-config.nix
-    # TODO: run this
-    # ./hardware-configuration.nix
+    ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix
     ../../common/system.nix
