@@ -25,6 +25,12 @@
     ".env".file = ./.env;
   };
 
+  /*
+  NOTE:
+  wg-easy run on a podman backend. For some reason, the docker
+  backend crashes on start with cause it doesn't recognize
+  "NET_ADMIN" capability.
+  */
   virtualisation.oci-containers.containers = {
     "wg-easy" = {
       image = "ghcr.io/wg-easy/wg-easy";
