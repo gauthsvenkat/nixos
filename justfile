@@ -26,4 +26,3 @@ secret-rekey:
 
 secret-edit path:
   nix run github:ryantm/agenix -- -e {{path}}
-  just secret-rekey
