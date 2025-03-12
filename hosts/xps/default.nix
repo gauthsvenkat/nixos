@@ -13,6 +13,11 @@
     ../../common/home-manager/development.nix
   ];
 
+  services.fprintd.tod = {
+    enable = true;
+    driver = pkgs.libfprint-2-tod1-goodix;
+  };
+
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       _1password-gui
