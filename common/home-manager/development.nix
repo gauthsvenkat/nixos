@@ -22,6 +22,7 @@
         rustup
         wl-clipboard-rs
         # other useful tools
+        uv
         cargo-generate
         spotify
         neovide

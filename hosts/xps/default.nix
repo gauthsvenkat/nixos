@@ -21,6 +21,10 @@
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       _1password-gui
+      slack
+      k9s
+      google-cloud-sdk
+      helm
     ];
     programs.git.userEmail = "gautham@dexterenergy.ai";
   };
