@@ -1,5 +1,5 @@
 let
-  keys = import ./common/public_keys.nix;
+  keys = import ./public_keys.nix;
 in
 {
   "hosts/nixpi/.env".publicKeys = keys.ando ++ keys.nixpi;
