@@ -2,11 +2,11 @@
 {
   programs.hyprland.enable = true;
 
-  environment.systemPackages = [ pkgs.kitty ];
+  environment.systemPackages = [ ];
 
   home-manager.users.${username}.wayland.windowManager.hyprland.settings =
     let
-      terminal = "wezterm";
+      terminal = pkgs.wezterm;
       mainMod = "SUPER";
     in
     {
