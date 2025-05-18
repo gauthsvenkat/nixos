@@ -138,6 +138,11 @@
             "${main_mod}, k, movefocus, u"
             "${main_mod}, l, movefocus, r"
 
+            "${main_mod} shift, h, movewindow, l"
+            "${main_mod} shift, j, movewindow, d"
+            "${main_mod} shift, k, movewindow, u"
+            "${main_mod} shift, l, movewindow, r"
+
             "${main_mod}, 1, workspace, 1"
             "${main_mod}, 2, workspace, 2"
             "${main_mod}, 3, workspace, 3"
@@ -160,7 +165,7 @@
             "${main_mod} shift, 9, movetoworkspace, 9"
             "${main_mod} shift, 0, movetoworkspace, 10"
             "${main_mod}, tab, togglespecialworkspace, magic"
-            "${main_mod} SHIFT, tab, togglespecialworkspace, magic"
+            "${main_mod} SHIFT, tab, movetoworkspace, magic"
           ];
 
           bindm = [
