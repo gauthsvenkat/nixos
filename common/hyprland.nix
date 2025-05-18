@@ -22,8 +22,9 @@
       settings =
         let
           terminal = "${pkgs.wezterm}/bin/wezterm";
-          # clipboard-manager = "${pkgs.copyq}/bin/copyq";
           file_manager = "${pkgs.kdePackages.dolphin}/bin/dolphin";
+          runner = "${pkgs.tofi}/bin/tofi-drun --drun-launch=true";
+          # clipboard-manager = "${pkgs.copyq}/bin/copyq";
           main_mod = "super";
         in
         {
@@ -125,11 +126,13 @@
 
           bind = [
             "${main_mod}, return, exec, ${terminal}"
+            "${main_mod}, e, exec, ${file_manager}"
+            "${main_mod}, space, exec, ${runner}"
+
             "${main_mod}, escape, killactive"
             "${main_mod} shift, escape, exit"
-            "${main_mod}, e, exec, ${file_manager}"
+
             "${main_mod}, v, togglefloating"
-            # "${main_mod}, r, exec, ${menu}"
             "${main_mod}, p, pseudo"
             # "${main_mod}, s, togglesplit"
 
@@ -165,7 +168,8 @@
             "${main_mod} shift, 9, movetoworkspace, 9"
             "${main_mod} shift, 0, movetoworkspace, 10"
             "${main_mod}, tab, togglespecialworkspace, magic"
-            "${main_mod} SHIFT, tab, movetoworkspace, magic"
+            # NOTE: following doesn't work on (atleast the thinkpad) for some reason
+            # "${main_mod} shift, tab, movetoworkspace, magic"
           ];
 
           bindm = [
