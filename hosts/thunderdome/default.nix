@@ -15,7 +15,6 @@ in
     ../../common/users.nix
     ../../common/nix-settings.nix
     ../../common/gui.nix
-    ../../common/hyprland.nix
 
     ../../common/personal.nix
     ../../common/development.nix

@@ -11,7 +11,7 @@
     ../../common/users.nix
     ../../common/nix-settings.nix
     ../../common/gui.nix
-    ../../common/hyprland.nix
+    ../../common/hyprland
 
     ../../common/personal.nix
     ../../common/development.nix
