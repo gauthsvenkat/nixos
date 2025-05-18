@@ -10,6 +10,7 @@
         terminal = "${pkgs.wezterm}/bin/wezterm";
         file_manager = "${pkgs.kdePackages.dolphin}/bin/dolphin";
         runner = "${pkgs.tofi}/bin/tofi-drun --drun-launch=true";
+        lock_cmd = "${pkgs.hyprlock}/bin/hyprlock";
         # clipboard-manager = "${pkgs.copyq}/bin/copyq";
         main_mod = "super";
       in
@@ -99,21 +100,17 @@
         input = {
           kb_layout = "us";
           follow_mouse = 1;
-          sensitivity = 0;
 
-          touchpad = {
-            natural_scroll = false;
-          };
+          touchpad.natural_scroll = true;
         };
 
-        gestures = {
-          workspace_swipe = false;
-        };
+        gestures.workspace_swipe = true;
 
         bind = [
           "${main_mod}, return, exec, ${terminal}"
           "${main_mod}, e, exec, ${file_manager}"
           "${main_mod}, space, exec, ${runner}"
+          "${main_mod}, o, exec, ${lock_cmd}"
 
           "${main_mod}, escape, killactive"
           "${main_mod} shift, escape, exit"
