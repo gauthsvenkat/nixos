@@ -48,6 +48,12 @@ in
 
   users.users.${username}.extraGroups = [ "gamemode" ];
 
+
+  home-manager.users.${username}.wayland.windowManager.hyprland.settings.env = [
+    "LIBVA_DRIVER_NAME,nvidia"
+    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+  ];
+
   home-manager.users.${username} = {
     # home.packages = with pkgs; [];
     programs.git.userEmail = "gauthsvenkat@gmail.com";
