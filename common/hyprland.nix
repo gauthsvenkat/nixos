@@ -8,10 +8,13 @@
     services = {
       dunst.enable = true;
       hyprpolkitagent.enable = true;
-      waybar.enable = true;
       hyprpaper.enable = true;
-      tofi.enable = true;
       # copyq.enable = true;
+    };
+
+    programs = {
+      tofi.enable = true;
+      waybar.enable = true;
     };
 
     wayland.windowManager.hyprland = {
