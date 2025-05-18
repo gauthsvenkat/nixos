@@ -5,6 +5,9 @@
     ./waybar.nix
   ];
 
+  #NOTE: this needs to be enabled as the module installed through home-manager will not be able to lock
+  programs.hyprlock.enable = true;
+
   home-manager.users.${username} = {
     programs = {
       tofi = {
