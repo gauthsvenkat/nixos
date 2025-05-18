@@ -14,6 +14,7 @@ in
     ../../common/users.nix
     ../../common/nix-settings.nix
     ../../common/gui.nix
+    ../../common/hyprland
 
     ../../common/personal.nix
     ../../common/development.nix
@@ -46,14 +47,22 @@ in
 
   users.users.${username}.extraGroups = [ "gamemode" ];
 
-
-  home-manager.users.${username}.wayland.windowManager.hyprland.settings.env = [
-    "LIBVA_DRIVER_NAME,nvidia"
-    "__GLX_VENDOR_LIBRARY_NAME,nvidia"
-  ];
-
   home-manager.users.${username} = {
-    # home.packages = with pkgs; [];
+    wayland.windowManager.hyprland.settings.env = [
+      "LIBVA_DRIVER_NAME,nvidia"
+      "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+    ];
+
+    services.hyprpaper.settings =
+      let
+        # NOTE: Make sure that the picture actually exists in the location!
+        path = "/home/${username}/Pictures/wallpapers/astronaut.jpg";
+      in
+      {
+        preload = path;
+        wallpaper = ", ${path}";
+      };
+
     programs.git.userEmail = "gauthsvenkat@gmail.com";
 
     xdg.autostart.entries = [

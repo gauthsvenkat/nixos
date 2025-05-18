@@ -16,7 +16,6 @@
         main_mod = "super";
       in
       {
-
         exec-once = [
           status_bar
         ];
