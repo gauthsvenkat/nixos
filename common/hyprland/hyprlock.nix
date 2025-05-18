@@ -1,3 +1,4 @@
+#TODO: Useful widgets and spice it up
 { username, ... }:
 {
   #NOTE: This needs to be enabled as well to set the pam module, which home-manager cannot do
@@ -9,6 +10,7 @@
         hide_cursor = true;
         grace = 10;
       };
+
       background = {
         path = "screenshot";
         blur_passes = 3;

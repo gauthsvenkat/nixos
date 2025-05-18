@@ -11,10 +11,16 @@
         file_manager = "${pkgs.kdePackages.dolphin}/bin/dolphin";
         runner = "${pkgs.tofi}/bin/tofi-drun --drun-launch=true";
         lock_cmd = "${pkgs.hyprlock}/bin/hyprlock";
-        # clipboard-manager = "${pkgs.copyq}/bin/copyq";
+        status_bar = "${pkgs.waybar}/bin/waybar";
+
         main_mod = "super";
       in
       {
+
+        exec-once = [
+          status_bar
+        ];
+
         env = [
           "XCURSOR_SIZE,24"
           "HYPRCURSOR_SIZE,24"
