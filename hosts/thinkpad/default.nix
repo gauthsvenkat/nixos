@@ -21,5 +21,16 @@
     ../../common/services/kanata.nix
   ];
 
-  home-manager.users.${username}.programs.git.userEmail = "gauthsvenkat@gmail.com";
+  home-manager.users.${username} = {
+    services.hyprpaper.settings =
+      let
+        # NOTE: Make sure that the picture actually exists in the location!
+        path = "/home/${username}/Pictures/wallpapers/astronaut.jpg";
+      in
+      {
+        preload = path;
+        wallpaper = ", ${path}";
+      };
+    programs.git.userEmail = "gauthsvenkat@gmail.com";
+  };
 }
