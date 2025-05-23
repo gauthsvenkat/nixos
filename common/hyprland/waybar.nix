@@ -11,11 +11,7 @@
 
         "custom/appmenu" = {
           format = "Apps";
-          on-click = "rofi -show drun";
-        };
-
-        "hyprland/window" = {
-          format = "{initialTitle}";
+          on-click = "tofi-drun --drun-launch=true";
         };
 
         "hyprland/workspaces" = {
@@ -61,8 +57,6 @@
         ];
 
         modules-right = [
-          "pulseaudio"
-          "network"
           "cpu"
           "memory"
           "clock"
