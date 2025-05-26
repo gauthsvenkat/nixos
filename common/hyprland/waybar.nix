@@ -60,15 +60,15 @@
             ""
             ""
           ];
-          tooltip-format = "{power}W | {time}";
+          tooltip-format = "{power}W | {timeTo}";
         };
 
         clock = {
           interval = 1;
-          format = " :%H:%M:%S";
+          format = " {:%H:%M:%S}";
           # TODO: Specific this in some global constants?
           timezone = "Europe/Amsterdam";
-          tooltip-format = "%D";
+          tooltip-format = "{%D}";
         };
       };
     };
