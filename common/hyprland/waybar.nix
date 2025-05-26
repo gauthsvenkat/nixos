@@ -68,7 +68,6 @@
           format = " {:%H:%M:%S}";
           # TODO: Specific this in some global constants?
           timezone = "Europe/Amsterdam";
-          tooltip-format = "{%D}";
         };
       };
     };
