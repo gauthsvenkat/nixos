@@ -6,7 +6,7 @@
 {
   imports = [
     ./home-manager.nix
-    ./gui.nix
+    ./gui
     ./services/mullvad-vpn.nix
   ];
 

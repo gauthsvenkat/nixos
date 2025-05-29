@@ -8,7 +8,7 @@
     ../../common/system.nix
     ../../common/users.nix
     ../../common/nix-settings.nix
-    ../../common/gui.nix
+    ../../common/gui/kde.nix
 
     ../../common/development.nix
     ../../common/laptop.nix

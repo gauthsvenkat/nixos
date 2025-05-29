@@ -6,7 +6,7 @@
 {
   imports = [
     ./home-manager.nix
-    ./gui.nix
+    ./gui
   ];
 
   home-manager = {
@@ -22,7 +22,6 @@
         python3
         nodejs
         ripgrep
-        # TODO: Figure out how to install rust toolchain without rustup
         rustup
         wl-clipboard-rs
         nixfmt-rfc-style
@@ -30,8 +29,6 @@
         uv
         pre-commit
         cargo-generate
-        # TODO: Figure out how to fetch wezterm confirm from github
-        # TODO: also for neovim
         wezterm
         vscode
         kdePackages.yakuake

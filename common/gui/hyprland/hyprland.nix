@@ -1,7 +1,5 @@
 { username, pkgs, ... }:
 {
-  programs.hyprland.enable = true;
-
   home-manager.users.${username}.wayland.windowManager.hyprland = {
     enable = true;
 
