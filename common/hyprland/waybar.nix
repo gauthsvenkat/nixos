@@ -13,11 +13,15 @@
         ];
 
         modules-center = [
+          "hyprland/workspaces"
         ];
 
         modules-right = [
           "cpu"
+          "memory"
+          "network"
 
+          "wireplumber"
           "bluetooth"
           "backlight"
           "battery"
@@ -25,7 +29,13 @@
           "clock"
         ];
 
+        "hyprland/workspaces".all-outputs = true;
+
         cpu.format = " {usage}%";
+        memory.interval = 10;
+        network.interval = 10;
+
+        wireplumber.reverse-scrolling = 1;
 
         bluetooth = {
           format-off = "󰂲";
