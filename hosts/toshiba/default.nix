@@ -19,7 +19,7 @@
     };
   };
 
-  services.adguardhome.settings.dhcp.enabled = true;
+  services.adguardhome.allowDHCP = true;
 
   services.logind.lidSwitchExternalPower = "ignore";
 }
