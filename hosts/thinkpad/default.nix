@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  homeDirectory,
+  username,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
 
@@ -10,5 +14,13 @@
   services.displayManager.autoLogin = {
     enable = true;
     user = username;
+  };
+
+  home-manager.users.${username}.services.hyprpaper.settings = let
+    # NOTE: Make sure that the picture actually exists in the location!
+    path = "${homeDirectory}/Pictures/wallpapers/astronaut.jpg";
+  in {
+    preload = path;
+    wallpaper = ", ${path}";
   };
 }
