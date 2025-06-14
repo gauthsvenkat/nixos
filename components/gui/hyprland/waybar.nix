@@ -1,0 +1,82 @@
+#TODO: Useful widgets and spice it up
+{username, ...}: {
+  home-manager.users.${username}.programs.waybar = {
+    enable = true;
+
+    settings = {
+      main_bar = {
+        layer = "top";
+        position = "bottom";
+        spacing = 4;
+
+        modules-left = [];
+
+        modules-center = ["hyprland/workspaces"];
+
+        modules-right = [
+          "cpu"
+          "memory"
+          "network"
+
+          "wireplumber"
+          "bluetooth"
+          "backlight"
+          "battery"
+
+          "clock"
+        ];
+
+        "hyprland/workspaces".all-outputs = true;
+
+        cpu.format = " {usage}%";
+        memory.interval = 10;
+        network.interval = 10;
+
+        wireplumber.reverse-scrolling = 1;
+
+        bluetooth = {
+          format-off = "󰂲";
+          format-on = "";
+          format-connected = "󰂱";
+          tooltip-format = "{status} \n {num_connections} connected \n {device_alias}";
+        };
+
+        #TODO: Stuff like backlight and battery is only relevant for laptops. Enable it conditionally
+        backlight = {
+          format = "{icon} {percent}%";
+          format-icons = [
+            "󰃞"
+            "󰃠"
+          ];
+          reverse-scrolling = true;
+          scroll-step = 2.0;
+          tooltip = false;
+        };
+
+        battery = {
+          interval = 15;
+          states = {
+            warning = 40;
+            critical = 20;
+          };
+          format = "{icon} {capacity}%";
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+          tooltip-format = "{power}W | {timeTo}";
+        };
+
+        clock = {
+          interval = 1;
+          format = " {:%H:%M:%S}";
+          # TODO: Specific this in some global constants?
+          timezone = "Europe/Amsterdam";
+        };
+      };
+    };
+  };
+}
