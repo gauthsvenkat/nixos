@@ -1,8 +1,8 @@
 # Extends the top-level config.nix with hyprland-specific configuration options
 {
-  config,
   lib,
   pkgs,
+  ...
 }: let
   inherit (lib) mkOption types;
 in {
