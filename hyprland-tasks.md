@@ -2,14 +2,6 @@
 
 This document tracks the project to refine the Hyprland setup on NixOS. We will use a Jira-like format to manage tasks.
 
-## Epics
-
-### EPIC-1: Refine Hyprland Configuration and Experience
-
-**Description:** The overall goal is to move from a disorganized setup to a clean, modular, and maintainable Hyprland configuration that provides a polished user experience.
-
----
-
 ## Bugs
 
 ### BUG-1: Network connectivity issues when launching Hyprland from SDDM
@@ -31,15 +23,6 @@ This document tracks the project to refine the Hyprland setup on NixOS. We will 
     - **Prune:** Remove complex or theme-related settings that will be handled later by `stylix` or more detailed component configurations (e.g., advanced `hyprlock` styling, `waybar` widgets).
     - **Organize:** Decide on a sensible file structure. The `waybar` configuration should be split into smaller, composable files. Each module (e.g., `cpu`, `memory`, `clock`) could be its own file, which can then be selectively imported in the `bases` layer to build the final `waybar.settings`.
   - **Goal:** The result should be a set of simple, functional NixOS modules for the core Hyprland components with default, un-themed settings.
-- [ ] **Task 2: Implement Stylix for Theming.**
-  - **Description:** `stylix` will be the primary tool for managing the color scheme, fonts, and overall theme. Theming for specific applications (like `waybar` or `hyprlock`) will be handled within their respective implementation tasks.
-  - **Functional Requirements:**
-    - Define a base color scheme and font configuration.
-    - Apply the theme on a per-application basis (opt-in).
-  - **Architecture:**
-    - The main `stylix` configuration will define the theme (e.g., `stylix.scheme`, `stylix.fonts`).
-    - Instead of setting `stylix.enable = true;`, we will set `stylix.targets.<program>.enable = true;` for each component we want to theme (e.g., `waybar`, `rofi`, `dunst`, etc.).
-    - This gives us granular control and prevents `stylix` from overriding manual configurations for applications we don't want it to manage.
 - [ ] **Task 3: Implement Waybar.**
   - **Description:**
   - **Suggestions:** `waybar`
