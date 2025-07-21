@@ -24,5 +24,11 @@ in {
       default = "${pkgs.kdePackages.dolphin}/bin/dolphin";
       description = "file manager for hyprland";
     };
+
+    notificationToggle = mkOption {
+      type = types.str;
+      default = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
+      description = "command to toggle notification center";
+    };
   };
 }

@@ -4,17 +4,15 @@
 Select and configure a notification daemon for Wayland.
 
 **Suggestions:**
-- `dunst` (feature-rich)
-- `mako` (lightweight)
+- `swaync` (lightweight)
 
 **Functional Requirements:**
 - Display notifications
 
 **Nice-to-haves:**
 - Notification history
-- Interactive actions/buttons
-- Filtering/modification rules
+- Interactive actions/buttons to close, pause for a while / dnd
 
-**Considerations:**
-- `dunst` preferred for advanced features
-- `mako` preferred for minimalism
+**Todo:**
+- keybinding
+- theming
