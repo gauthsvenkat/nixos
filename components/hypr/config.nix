@@ -16,19 +16,25 @@ in {
     terminal = mkOption {
       type = types.str;
       default = "${pkgs.wezterm}/bin/wezterm";
-      description = "terminal emulator for hyprland";
+      description = "terminal emulator";
     };
 
     fileManager = mkOption {
       type = types.str;
       default = "${pkgs.kdePackages.dolphin}/bin/dolphin";
-      description = "file manager for hyprland";
+      description = "file manager";
     };
 
     notificationToggle = mkOption {
       type = types.str;
       default = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
-      description = "command to toggle notification center";
+      description = "toggle notification center";
+    };
+
+    launcher = mkOption {
+      type = types.str;
+      default = "${pkgs.tofi}/bin/tofi-drun --drun-launch=true";
+      description = "application launcher";
     };
   };
 }

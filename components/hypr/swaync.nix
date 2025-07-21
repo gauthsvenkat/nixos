@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: let
+{config, ...}: let
   inherit (config.hostCfg) username;
 in {
   home-manager.users.${username}.services.swaync = {

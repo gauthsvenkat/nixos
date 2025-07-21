@@ -1,6 +1,6 @@
 {config, ...}: let
   inherit (config.hostCfg) username;
-  inherit (config.hostCfg.hyprCfg) mainMod terminal fileManager notificationToggle;
+  inherit (config.hostCfg.hyprCfg) mainMod terminal fileManager notificationToggle launcher;
 in {
   programs.hyprland.enable = true;
 
@@ -105,6 +105,7 @@ in {
         bind = [
           "${mainMod}, return, exec, ${terminal}"
           "${mainMod}, e, exec, ${fileManager}"
+          "${mainMod}, space, exec, ${launcher}"
 
           "${mainMod}, escape, killactive"
           "${mainMod} shift, escape, exit"
